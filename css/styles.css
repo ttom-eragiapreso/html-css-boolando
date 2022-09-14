@@ -6,14 +6,22 @@
   box-sizing: border-box;
 }
 
+li:first-child{
+  padding-left: 0;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
   width: 100%;
-  max-width: 90%;
+  max-width: 85%;
   margin: 0 auto;
+}
+
+img{
+  max-width: 100%;
 }
 
 ul{
@@ -64,10 +72,18 @@ header .container{
 
 /* Cards */
 
+.row.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .card{
   margin-top: 150px;
   padding: 80px 0;
   display: inline-block;
+  height: 1168px;
+  width: 640px;
 }
 
 .discount, .sostenibilità{
@@ -149,4 +165,31 @@ header .container{
 
 .card-image:hover .hover-img{
   display: block;
+}
+
+/* Footer */
+
+footer{
+  background-color: #1a1a1a;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.info h5{
+  margin-bottom: 10px;
+}
+
+.info ul li{
+  font-size: 1.2rem;
+}
+
+.social p{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.social i{
+  margin-right: 5px;
 }
