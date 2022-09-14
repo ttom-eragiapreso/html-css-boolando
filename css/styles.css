@@ -1,4 +1,6 @@
-/* Reset */
+/* Reset and General */
+
+/* PER SBAGLIO HO FATTO TUTTO IL LAYOUT CON CHROME CHE ERA ZOOMMATO AL 67%. HO SCOPERTO CHE C'è LA PROPRIETà ZOOM PER RIMEDIARE A QUESTO SENZA DOVER MANUALMENTE ANDARE A CAMBIARE TUTTE LE DIMENSIONI. HO LETTO PERò CHE NON FUNZIONA CON FIREFOX E NON HO TROVATO UN ALTRO MODO PER OVVIARE A QUESTO PROBLEMA. */
 
 *{
   margin: 0;
@@ -12,6 +14,9 @@ li:first-child{
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  zoom: .67;
+  /* transform: scale(0.67);
+  transform-origin: top left; */
 }
 
 .container {
@@ -36,6 +41,10 @@ ul li {
 ul li a{
   text-decoration: none;
   color: white;
+}
+
+h4{
+  text-transform: uppercase;
 }
 
 
@@ -92,17 +101,20 @@ header .container{
   padding: 5px 15px;
   position: absolute;
   font-size: 1.2rem;
+  bottom: 45px;
 }
 
 .discount{
-  bottom: 45px;
   left: 0;
 }
 
 .sostenibilità{
   background-color: green;
-  bottom: 45px;
   left: 80px;
+}
+
+.sostenibilità.no-discount{
+  left: 0;
 }
 
 .card-image{
@@ -147,6 +159,7 @@ header .container{
 .discounted-price{
   color: red;
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .discounted-price::after{
@@ -155,6 +168,14 @@ header .container{
   margin-left: 10px;
   text-decoration: line-through;
 }
+
+.discounted-price.price-3::after{
+  content: '184,99 €';
+}
+.discounted-price.price-5::after, .discounted-price.price-6::after{
+  content: '';
+}
+
 
 .hover-img{
   position: absolute;
