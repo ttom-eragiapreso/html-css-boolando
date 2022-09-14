@@ -1,0 +1,140 @@
+/* Reset */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+}
+
+ul li {
+  padding: 0 10px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+
+ /* Header  and Navbar*/
+
+
+header{
+  height: 150px;
+  background-color: #ff6900;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+header .container{
+  padding: 15px 0;
+}
+
+.logo{
+  width: 270px;
+  vertical-align: middle;
+}
+
+.navbar-container{
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  align-items: center;
+}
+
+/* Cards */
+
+.card{
+  margin-top: 150px;
+  padding: 80px 0;
+}
+
+.discount, .sostenibilità{
+  background-color: red;
+  color: white;
+  padding: 5px 15px;
+  position: absolute;
+  font-size: 1.2rem;
+}
+
+.discount{
+  bottom: 45px;
+  left: 0;
+}
+
+.sostenibilità{
+  background-color: green;
+  bottom: 45px;
+  left: 80px;
+}
+
+.card-image{
+  position: relative;
+  display: inline-block;
+}
+
+.heart-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 3rem;
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.heart-container:hover{
+  color: red;
+  cursor: pointer;
+}
+
+.heart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card p{
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.card h4{
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.discounted-price{
+  color: red;
+  font-weight: 600;
+}
+
+.discounted-price::after{
+  content: '29,99 €';
+  color: black;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
